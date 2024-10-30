@@ -1,6 +1,6 @@
 <script lang="ts">
   export let message: string = ''
-  export let character: string = 'narrador'
+  export let character: string = 'Narrador'
 </script>
 
 <style lang="scss">
@@ -31,9 +31,9 @@
     &.Zephirot,
     &.Prota {
       border-radius: var(--radius);
-      box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
       padding: 10px 15px;
       max-width: 80%;
+      width: fit-content;
       color: var(--colorText);
 
       max-width: 90%;
@@ -54,29 +54,12 @@
       background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
     }
 
-    &.Capitulo {
-      p {
-        font-family: 'Rye';
-        text-align: center;
-        font-size: 30px;
-        padding-top: 20px;
-
-        @include notDesktop {
-          font-size: 20px;
-        }
-      }
-    }
-
     &.Prota {
-      margin-left: 20%;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(194, 194, 194, 1) 100%);
+      margin-left: auto;
+      background: linear-gradient(135deg, rgb(212, 212, 212) 0%, rgb(151, 151, 151) 100%);
 
       p {
         text-align: right;
-      }
-
-      @include notDesktop {
-        margin-left: 10%;
       }
     }
   }
@@ -92,7 +75,7 @@
 </style>
 
 <div class="message {character}">
-  {#if character != 'Narrador' && character != 'Prota' && character != 'Capitulo'}
+  {#if character != 'Narrador' && character != 'Prota'}
     <span class="name">
       {character}
     </span>

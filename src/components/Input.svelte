@@ -149,6 +149,7 @@
       outline: none;
       z-index: 1;
       color: var(--colorText3);
+      backdrop-filter: blur(10px);
 
       &:-webkit-autofill {
         padding-left: 5px !important;

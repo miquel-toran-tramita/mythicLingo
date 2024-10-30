@@ -30,6 +30,18 @@
   }
 }
 
+.g-btn {
+  transition: 0.3s ease;
+  height: 100%;
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, rgba(30, 0, 150, 1) 0%, rgba(165, 0, 167, 1) 100%);
+
+  &:hover {
+    transform: scale(0.9);
+  }
+}
+
 .g-wrapper {
   max-width: $breakpoint;
   padding: 0 20px;

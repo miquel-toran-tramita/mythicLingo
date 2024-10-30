@@ -70,11 +70,6 @@
     &.btn-main {
       color: var(--colorText3);
       background: linear-gradient(60deg, #00bfff, rgb(225, 0, 255)); /* Degradado de púrpura a azul */
-
-      &:hover {
-        background-color: transparent;
-        color: var(--colorPrimary);
-      }
     }
 
     &.btn-secondary {

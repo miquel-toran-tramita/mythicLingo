@@ -1,7 +1,7 @@
 import OpenAI from 'openai'
 import type { APIRoute } from 'astro'
 import { api } from '@/utils/api'
-import { INITIAL_PROMPT, BETTER_PROMPT } from '@/constants/prompt'
+import { PROMPT } from '@/constants/prompt'
 
 export const POST: APIRoute = async ({ request }) => {
   try {
@@ -20,11 +20,13 @@ export const POST: APIRoute = async ({ request }) => {
 
     const completion: any = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
-      messages: [{ role: 'system', content: JSON.stringify(BETTER_PROMPT) }, ...memory],
+      messages: [{ role: 'system', content: PROMPT }, ...memory],
       n: 1,
     })
 
     const message = completion.choices[0].message
+
+    console.log(message)
 
     message.content = JSON.parse(message.content)
     message.content = message.content.output ? message.content.output : message.content
