@@ -55,12 +55,15 @@
     }
 
     &.Capitulo {
-      font-family: 'Rye';
-      text-align: center;
-      font-size: 30px;
+      p {
+        font-family: 'Rye';
+        text-align: center;
+        font-size: 30px;
+        padding-top: 20px;
 
-      @include notDesktop {
-        font-size: 20px;
+        @include notDesktop {
+          font-size: 20px;
+        }
       }
     }
 

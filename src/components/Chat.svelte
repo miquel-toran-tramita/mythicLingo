@@ -51,7 +51,7 @@
   .g-wrapper {
     transition: 0.3s ease;
     display: grid;
-    height: 100vh;
+    height: 100dvh;
     grid-template-rows: fit-content(100%) 1fr 100px;
 
     &.compacted {
