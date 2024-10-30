@@ -1,0 +1,26 @@
+---
+import StoryboardPage from '@/storyboard/components/StoryboardPage.svelte'
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="view-transition" content="same-origin" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <title>Storyboard 🌟</title>
+  </head>
+  <body>
+    <StoryboardPage client:load />
+
+    <style lang="scss" is:global>
+      @use '@/sass/global.scss';
+    </style>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import { PAGE_URLS } from '@/constants/pageUrls'
+import Svg from '@/components/essentials/Svg.svelte'
+---
+
+<style lang="scss">
+  h1 {
+    text-align: center;
+    font-size: 50px;
+    padding: 70px 0;
+    font-weight: bold;
+  }
+
+  .special {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  body {
+    background-color: var(--colorBackground);
+  }
+
+  .g-wrapper {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.3);
+    border-radius: var(--radius);
+    padding: 0;
+    background-color: var(--colorBase);
+
+    a {
+      padding: 10px;
+      padding-left: 30px;
+      font-size: 20px;
+
+      &:hover {
+        color: var(--colorBrand);
+        background-color: var(--colorBackground);
+      }
+    }
+  }
+</style>
+
+<Layout title="Tramita | Área de desarrollo">
+  <h1>ÁREA DE DESARROLLO</h1>
+
+  <div class="g-wrapper">
+    <a href="/private/svgs" class="special"><Svg name="starTick" />Lista de iconos</a>
+
+    {PAGE_URLS.map((href: string) => <a {href}>{href}</a>)}
+  </div>
+</Layout>

@@ -1,0 +1,29 @@
+@use 'src/sass/mixins.scss' as *;
+
+:root {
+  --colorPrimary: #1abc9c;
+  --colorSecondary: #ffffff;
+  --colorAccent: #1abc9c;
+  --colorNeutral: #f7f7f7;
+
+  --colorText: #19312c;
+  --colorText2: #839693;
+  --colorText3: #f1f1f1;
+
+  --colorBorder: #d3d3d3;
+
+  --radius: 15px;
+  --menuHeight: 60px; // update globalVariables.ts MENU_HEIGHT
+  --fontPrimary: 'Raleway';
+  --fontSecondary: 'Poppins';
+}
+
+.dark-mode {
+  --colorNeutral: #121212; // #282828
+  --colorSecondary: #282828;
+  --colorSecondary2: #3f3f3f;
+  --colorBorder: rgba(255, 255, 255, 0.2);
+  --colorText: #f3f3f3;
+  --colorText2: #adadad;
+  --colorText3: #f1f1f1;
+}
